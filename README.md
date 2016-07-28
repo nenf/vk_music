@@ -12,8 +12,9 @@ $ pip intall vk
 ```
 
 * Generate Vk and Google api token:
-[Create an App Vk](https://new.vk.com/editapp?act=create)
-[Create an App Google - urlshortener](https://console.developers.google.com/apis/api/urlshortener/)
+  * [Create an App Vk](https://new.vk.com/editapp?act=create)
+  * [Create an App Google - urlshortener](https://console.developers.google.com/apis/api/urlshortener/)
+
 
 * Set VK_TOKEN, GOOGLE_TOKEN vars in config.py
 
@@ -23,11 +24,11 @@ $ pip intall vk
 $ ./vk_searcher.py
 
 Input audio name: linkin park
-1) Eminem &amp; Linkin Park	: Violent Rhythm
+1) Eminem; Linkin Park	: Violent Rhythm
 2) Linkin Park	: Powerless
 3) Linkin Park	: New Devide
 4) Linkin Park	: My December
-5) Eminem &amp; Linkin Park	: Dead Space
+5) Eminem; Linkin Park	: Dead Space
 6) linkin park	: numb (432 hz)
 
 Menu:
