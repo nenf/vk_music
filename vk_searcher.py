@@ -4,18 +4,11 @@
 import vk
 from re import search
 from pyshorteners import Shortener
+from common import uformat
 from config import *
 
 
-def utf(text):
-    return text.encode("utf-8")
-
-
-def uformat(text):
-    return utf(text[:30].rstrip())
-
-
-class VkMusic:
+class VkMusicSearcher:
     def __init__(self, vk_api_token, google_api_token):
         __session = vk.Session(access_token=vk_api_token)
         __google_api_token = google_api_token
@@ -53,12 +46,12 @@ class VkMusic:
                 music_number = int(option)
                 music_info = query_result[music_number - 1]
                 print "----> {0} : {1} | {2}\n".format(uformat(music_info["artist"]), uformat(music_info["title"]),
-                                                       self.shortener.short(utf(music_info["url"])))
+                                                       self.shortener.short(music_info["url"]))
             else:
                 continue
 
 if __name__ == "__main__":
-    v = VkMusic(VK_TOKEN, GOOGLE_TOKEN)
+    v = VkMusicSearcher(VK_TOKEN, GOOGLE_TOKEN)
     while True:
         try:
             query = raw_input("\nInput audio name: ")
