@@ -39,3 +39,36 @@ Input option: 4
 ----> Linkin Park : My December | http://goo.gl/txWrfS
 
 ```
+
+### VK music searcher
+Noninteractive console application for download music in VK.
+
+* Set VK_TOKEN var in config.py
+
+* Uage:
+
+```bash
+$ ./vk_downloader.py --help
+usage: vk_downloader.py [-h] -i ID -o OUT [-j JOB]
+
+Script for download audio from vk.com
+
+optional arguments:
+  -h, --help         show this help message and exit
+  -i ID, --id ID     User id
+  -o OUT, --out OUT  Output folder with audio files
+  -j JOB, --job JOB  Setting maximum of threads
+```
+
+* Example of the usage:
+
+```bash
+$ ./vk_downloader.py -i 27537400 -o out -j 10
+Count audio : 394
+Please, wait...
+
+[+] : Wolves At The Gate - Slaves - Download successful
+[+] : Enter Shikari - Torn Apart - Download successful
+[+] : Motionless In White - Death March - Download successful
+...
+```
